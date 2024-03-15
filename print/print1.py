@@ -1,4 +1,4 @@
-# Print 사용법
+# Print 사용법1
 # /python3_formatted_output.php
 
 # 기본 출력

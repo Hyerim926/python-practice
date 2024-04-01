@@ -46,3 +46,12 @@ module2.mod2_test2()
 print()
 print()
 print()
+
+# 연습
+from sub.sub3 import calculate as cal
+
+print(cal.add(3, 4))
+print(cal.power(2, 3))
+print(cal.multiply(4, 10))
+print(cal.divide(6, 3))
+print(cal.subtract(10, 9))

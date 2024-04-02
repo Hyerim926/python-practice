@@ -120,7 +120,9 @@ try:
         print('Ok! Pass!')
     else:
         raise ValueError
-except ValueError:
+        # raise ValueError('Custom error message')  # customMessage 설정법 -> print(e) 실행됨
+except ValueError as e:
+    # print(e)
     print('Occurred! Exception!')
 else:
     print('Ok! else!')

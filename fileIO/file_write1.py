@@ -79,3 +79,24 @@ print()
 with open('../resource/it_news.txt', 'r', encoding='utf-8') as f:
     line = f.read()
     print(line.split('\n'))
+
+# 파일 쓰기(write)
+# 예제 1
+with open('../resource/contents1.txt', 'w') as f:
+    f.write('I love Python\n')
+
+# 예제 2 append
+with open('../resource/contents1.txt', 'at') as f:
+    f.write('I love Python2\n')
+
+# 예제 3
+# writelines : 리스트 -> 파일
+with open('../resource/contents2.txt', 'w') as f:
+    list = ['Apple\n', 'Banana\n', 'Cherry\n', 'Melon\n']
+    f.writelines(list)
+
+# 예제 4
+with open('../resource/contents3.txt', 'w') as f:
+    print('Test Text Write!', file=f)  # console에 출력되지 않고 파일에 작성됨
+    print('Test Text Write!', file=f)
+    print('Test Text Write!', file=f)

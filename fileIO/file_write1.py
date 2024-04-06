@@ -27,3 +27,55 @@ print(cts)
 
 # 반드시 close
 f.close()
+
+print()
+
+# 예제 2
+# with : 한 프로세스를 매번 열고 닫고 할 필요가 없음, 가독성 향상
+with open('../resource/it_news.txt', 'r', encoding='utf-8') as f:
+    c = f.read()
+    print(c)
+    print(iter(c))
+    print(list(c))
+
+print()
+
+# 예제 3
+# read() : 전체 읽기, read(10) : 10Byte 읽기
+
+with open('../resource/it_news.txt', 'r', encoding='utf-8') as f:
+    c = f.read(20)
+    print(c)
+    print(len(c))
+    c = f.read(20)  # 마지막에 어디까지 읽는지 기억하고서 처리됨, 커서
+    print(c)
+    f.seek(0, 0)  # 다시 처음부터
+    c = f.read(20)
+    print(c)
+
+print()
+
+# 예제 4
+# readline() : 한 줄 씩 읽기
+with open('../resource/it_news.txt', 'r', encoding='utf-8') as f:
+    line = f.readline()
+    print(line)
+    line = f.readline()
+    print(line)
+
+print()
+
+# 예제 5
+# readlines : 전체를 읽은 후 라인 단위로 리스트로 저장
+with open('../resource/it_news.txt', 'r', encoding='utf-8') as f:
+    cts = f.readlines()
+    print(cts)
+    print()
+    for line in cts:
+        print(line, end='')
+
+print()
+
+with open('../resource/it_news.txt', 'r', encoding='utf-8') as f:
+    line = f.read()
+    print(line.split('\n'))

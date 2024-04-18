@@ -60,5 +60,54 @@ print(car_dicts)
 print()
 print()
 
-# 클래스 구조
 
+# 클래스 구조
+# 구조 설계 후 재사용성 증가, 코드 반복 최소화, 메소드 활용
+
+class Car():
+    def __init__(self, company, detail):  # constructor 역할
+        self._company = company
+        self._detail = detail
+
+    # 인스턴스 생성 후 인스턴스를 print 할 때 보여주기 위한 함수 (기본은 객체의 타입과 id값을 반환함)
+    # str과 repr 중에서는 우선순위가 더 높다
+    # str : 사용자 레벨로 객체 정보 확인
+    def __str__(self):
+        return f'str : {self._company} - {self._detail}'
+
+    # repr : 개발자 레벨로 객체 정보 확인
+    def __repr__(self):
+        return f'repr : {self._company} - {self._detail}'
+
+
+car1 = Car('Ferrari', {'color': 'White', 'horsepower': 400, 'price': 8000})
+car2 = Car('BMW', {'color': 'Black', 'horsepower': 270, 'price': 5000})
+car3 = Car('Audi', {'color': 'silver', 'horsepower': 300, 'price': 6000})
+print(car1)
+print(car2)
+print(car3)
+
+print()
+
+print(car1.__dict__)
+print(car2.__dict__)
+print(car3.__dict__)
+
+print()
+print()
+
+# 리스트 선언
+car_list = []
+
+car_list.append(car1)
+car_list.append(car2)
+car_list.append(car3)
+
+print(car_list)  # 리스트 안에서 객체에 대한 정보를 보여주기 때문에 __repr__ 이 호출됨
+
+print()
+print()
+
+for car in car_list:
+    print(car)  # 반복(__str__)
+    print(repr(car))

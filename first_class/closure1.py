@@ -27,7 +27,7 @@ c = 30
 
 
 def func_v3(a):
-    global c
+    global c # global로 사용된 변수를 로컬 area에서 사용하는 것은 디버깅이 쉽지 않은 코드이므로 지양한다
     # c = 40
     print(a)
     print(

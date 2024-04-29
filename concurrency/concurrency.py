@@ -87,7 +87,7 @@ class WordSplitGenerator:
 
     def __iter__(self):
         for word in self._text:
-            yield word  # 제네레이터
+            yield word  # 제네레이터, yield가 인덱스 정보를 가지고 있음
         return
 
     def __repr__(self):

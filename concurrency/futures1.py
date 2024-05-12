@@ -10,8 +10,8 @@
 # 2. 실행 중인 작업 취소, 완료 여부 체크, 타임아웃 옵션, 콜백함수 추가, 동기화 코드 매우 쉽게 작성 -> Promise 개념
 
 # 2가지 패턴 실습
-# concurrent.futures 사용법1
-# concurrent.futures 사용법2
+# concurrent.futures 사용법1 (map)
+# concurrent.futures 사용법2 (wait, as_completed)
 
 # GIL : Global Interpreter Lock
 # 두 개 이상의 스레드가 동시에 실행될 때 하나의 자원을 엑세스 하는 경우 -> 문제점을 방지하기 위해 GIL 실행, 즉, 리소스 전체에 락이 걸린다
